@@ -98,6 +98,12 @@
 		<section id="content">
 			<div class="content-wrap">
 				<div class="container clearfix">
+					<!-- <div class="search-container text-center">
+						<input type="text" id="searchInput" placeholder="Search by Name..." onkeyup="filterButtons()">
+					</div> -->
+
+					<input type="text" class="form-control mb-4" id="searchInput" placeholder="Search by name" onkeyup="filterButtons()">
+
 					<a href="#modalDetail" data-lightbox="inline">
 						<div id="button-container" class="text-center"></div>
 					</a>
@@ -1527,6 +1533,21 @@
 		// Menutup modal
 		function closeModal() {
 			document.getElementById('modalDetail').style.display = 'none';
+		}
+
+		// Fungsi untuk memfilter tombol berdasarkan input pencarian
+		function filterButtons() {
+			const input = document.getElementById('searchInput').value.toLowerCase();
+			const buttons = document.querySelectorAll('#button-container a');
+
+			buttons.forEach(button => {
+				const companyName = button.querySelector('span').textContent.toLowerCase();
+				if (companyName.includes(input)) {
+					button.style.display = ''; // Tampilkan tombol
+				} else {
+					button.style.display = 'none'; // Sembunyikan tombol
+				}
+			});
 		}
 
 		// Inisialisasi
