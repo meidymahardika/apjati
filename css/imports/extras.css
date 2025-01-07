@@ -23,7 +23,7 @@
 .page-link,
 .page-link:hover,
 .page-link:focus {
-  color: #f7d807;
+  color: #CBA344;
 }
 
 .btn-link:hover, .btn-link:focus {
@@ -69,14 +69,14 @@
 .page-link:hover,
 .page-link:focus {
   color: #FFF !important;
-  background-color: #f7d807 !important;
-  border-color: #f7d807 !important;
+  background-color: #CBA344 !important;
+  border-color: #CBA344 !important;
 }
 
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
-  background-color: #f7d807;
+  background-color: #CBA344;
 }
 
 label.radio, label.checkbox {
